@@ -1,0 +1,1733 @@
+/* Thin */
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Thin\ Italic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light */
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Light\ Italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+
+}
+
+/* Regular */
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Regular\ Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+
+}
+
+/* Medium */
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Medium\ Italic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+
+}
+
+/* Bold */
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Bold\ Italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+
+}
+
+/* Black */
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("./fonts/Gordita\ Black\ Italic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+
+}
+
+
+/* tiemposHeadline Font setup */
+/* /regular */
+@font-face {
+  font-family: "TiemposHeadline";
+  src: url(./fonts/Gordita\ Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TiemposHeadline";
+  src: url("./fonts/TiemposHeadline-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* /bold */
+@font-face {
+  font-family: "TiemposHeadline";
+  src: url("./fonts/TiemposHeadline-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TiemposHeadline";
+  src: url("./fonts/TiemposHeadline-BlackItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+
+/* style start here  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+/* Header & hero section /////////////////////////////////////////// */
+/* Hero Section */
+.Hero-Wrapper {
+
+  width: 100%;
+  margin: 0px auto;
+  /* min-height: 650px; */
+  background-image: url("./img/herowrapper.png");
+  background-size: cover;
+  background-position: center;
+
+}
+
+/* Container */
+.headerContainer {
+  width: 100%;
+  max-width: 1205px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 45px;
+
+}
+
+/* Links */
+nav a {
+  font-size: 16px;
+  color: #15222f;
+  font-weight: 500;
+  font-family: "Gordita";
+  text-decoration: none;
+}
+
+/* Logo */
+.logo {
+  font-family: "Gordita";
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #15222f;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #15222f;
+  transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+
+.hero {
+  background: rgba(255, 255, 255, 0.07);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 50px;
+  height: 100vh;
+  background-image: url("./img/HeroBubbles.png");
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+
+}
+
+.MainHeading {
+
+  z-index: 10;
+}
+
+.mainCookieImg {
+  position: absolute;
+  top: 15%;
+  right: 6%;
+  width: 65%;
+
+}
+
+.treeEffectImg1 {
+  position: absolute;
+  bottom: -12%;
+  right: 14%;
+  width: 115px;
+  animation: glowPulse 3s infinite alternate;
+
+}
+
+@keyframes glowPulse {
+  from {
+    filter: drop-shadow(0px 0px rgb(171, 214, 212));
+  }
+
+  to {
+    filter: drop-shadow(0px 0px 5px #22bdec);
+  }
+}
+
+.treeEffectImg2 {
+  position: absolute;
+  bottom: -15%;
+  right: 25%;
+  width: 80px;
+  animation: glowPulse1 3s infinite alternate;
+
+}
+
+@keyframes glowPulse1 {
+  from {
+    filter: drop-shadow(0px 0px rgb(171, 214, 212));
+  }
+
+  to {
+    filter: drop-shadow(0px 0px 5px #6f24e9);
+  }
+}
+
+/* Heading */
+.hero h2 {
+  font-family: "";
+  font-size: 82px;
+  color: #15222f;
+  font-weight: 400;
+  line-height: 1.2;
+
+}
+
+/* Paragraph */
+.hero p {
+  font-family: "Gordita";
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #15222f;
+}
+
+.ProductBtn {
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 35px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Gordita";
+  text-align: center;
+  background-color: #FF26B0;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 30px;
+  margin: 14px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.ProductBtn:hover {
+  background-color: #e6009e;
+
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================= */
+/* 📱 Tablet (1024px and below) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .headerContainer {
+    width: 100%;
+    max-width: 808px;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 800px;
+    height: 90vh;
+  }
+
+  nav {
+    gap: 25px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .treeEffectImg1 {
+    position: absolute;
+    bottom: -17%;
+    right: 15%;
+    width: 115px;
+  }
+
+  .treeEffectImg2 {
+    position: absolute;
+    bottom: -12%;
+    right: 31%;
+    width: 55px;
+  }
+
+  .hero h2 {
+    font-family: "";
+    font-size: 68px;
+    color: #15222f;
+    font-weight: 400;
+    line-height: 1.2;
+
+  }
+
+  .mainCookieImg {
+    position: absolute;
+    top: 22%;
+    right: 3%;
+    width: 60%;
+
+  }
+}
+
+
+/* ========================= */
+/* 📱 Mobile (768px and below) */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+    z-index: 1001;
+  }
+
+  /* HERO FIX */
+  .hero {
+    /* border: 1px solid red; */
+    background: rgba(255, 255, 255, 0.07);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: 90%;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    height: 80vh;
+    background-image: url("./img/HeroBubbles.png");
+    background-size: cover;
+    background-position: center;
+    overflow-y: hidden;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 42px;
+    line-height: 1.3;
+    z-index: 10;
+  }
+
+  .hero p {
+    font-size: 15px;
+    margin: 15px auto;
+    max-width: 90%;
+  }
+
+  /* FULL SCREEN NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* hidden */
+    width: 70%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* ACTIVE STATE */
+  nav.active {
+    right: 0;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .headerContainer {
+
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 50px; */
+  }
+
+  .treeEffectImg1 {
+    display: block;
+    position: absolute;
+    right: 8;
+    width: 90px;
+    bottom: 1;
+  }
+
+  .treeEffectImg2 {
+    display: block;
+    position: absolute;
+    right: 3;
+    width: 50px;
+    bottom: 10;
+  }
+
+  .mainCookieImg {
+    position: absolute;
+    top: 40%;
+    right: 15%;
+  }
+
+}
+
+/* ========================= */
+/* 📱 Small Mobile (480px and below) */
+/* ========================= */
+@media (max-width: 480px) {
+  .Hero-Wrapper {
+    padding: 0 10px;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    /* ✅ fixed */
+    padding: 20px;
+    text-align: center;
+    /* ✅ better mobile UX */
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero {
+    /* border: 1px solid red; */
+    background: rgba(255, 255, 255, 0.07);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: 90%;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    height: 80vh;
+    background-image: url("./img/HeroBubbles.png");
+    background-size: cover;
+    background-position: center;
+    overflow-y: hidden;
+    text-align: center;
+  }
+
+  .mainCookieImg {
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    width: 260px;
+    z-index: -1;
+  }
+
+  .treeEffectImg1 {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 90px;
+    bottom: 10;
+  }
+
+  .treeEffectImg2 {
+    display: block;
+    position: absolute;
+    right: 3;
+    width: 50px;
+    bottom: 10;
+  }
+
+}
+
+
+
+
+
+/* ///////////////////goal section //////////////////// */
+
+
+.goal-section {
+  width: 100%;
+  max-width: 1205px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.goalcontent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  place-items: center;
+}
+
+.goalcontent h2 {
+  font-size: 60px;
+  font-family: "TiemposHeadline";
+  font-weight: 400;
+  line-height: 76px;
+  color: #15222f;
+
+}
+
+.goalcontent h2 span {
+  font-family: "TiemposHeadline";
+  font-weight: 700;
+
+}
+
+.goalcontent p {
+  font-size: 20px;
+  line-height: 35px;
+  color: #1f213f;
+  font-family: "Gordita";
+}
+
+.GoalContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 40px 60px;
+  place-items: center;
+}
+
+.goalCard {
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goalCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.goalCard img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.goalCard h3 {
+  font-size: 25px;
+  line-height: 35px;
+  color: #000000;
+  font-weight: 500;
+  font-family: "Gordita";
+  text-align: center;
+}
+
+/* ========================= */
+/* 📱 Tablet (1024px and below) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .goal-section {
+    width: 100%;
+    max-width: 898px;
+
+  }
+
+  .goalCard h3 {
+    font-size: 17px;
+    line-height: 35px;
+    color: #000000;
+    font-weight: 500;
+    font-family: "Gordita";
+    text-align: center;
+  }
+
+  .goalcontent h2 {
+    font-size: 42px;
+    font-family: "TiemposHeadline";
+    font-weight: 400;
+    line-height: 76px;
+    color: #15222f;
+  }
+
+  .goalCard img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+
+  .goalcontent p {
+    font-size: 17px;
+    line-height: 35px;
+    color: #1f213f;
+    font-family: "Gordita";
+  }
+}
+
+/* ========================= */
+/* 📱 Mobile (768px and below) */
+/* ========================= */
+@media (max-width: 768px) {
+  .goal-section {
+    width: 100%;
+
+  }
+
+  .goalcontent h2 {
+    font-size: 33px;
+    font-family: "TiemposHeadline";
+    font-weight: 400;
+    line-height: 56px;
+    color: #15222f;
+  }
+
+  .goalcontent p {
+    font-size: 15px;
+    line-height: 24px;
+    color: #1f213f;
+    font-family: "Gordita";
+
+  }
+
+  .GoalContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 40px 60px;
+  }
+
+}
+
+/* ========================= */
+/* 📱 Small Mobile (480px and below) */
+/* ========================= */
+@media (max-width: 480px) {
+  .goalcontent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .GoalContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    padding: 40px 60px;
+  }
+}
+
+
+
+/* //////////////////////////////////ABOUT CSS CODE ?///////////////////// */
+
+
+
+.About-Section {
+  background-image: url("./img/AboutBg.png");
+  margin: 50px 0px;
+
+}
+
+.AboutContainer {
+
+  width: 100%;
+  max-width: 1205px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  height: auto;
+  padding: 10px
+}
+
+.aboutContent h2 {
+  font-size: 60px;
+  line-height: 76px;
+  color: #15222f;
+  font-weight: bold;
+  font-family: "TiemposHeadline";
+}
+
+.aboutContent p {
+
+  font-size: 20px;
+  line-height: 35px;
+  color: #15222f;
+  font-family: "Gordita";
+}
+
+.dogContainer {
+
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dogContainer img {
+  height: 575px;
+  position: relative;
+  top: 100px;
+}
+
+.dogContainer img:hover {
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.25));
+}
+
+/* ========================= */
+/* 📱 Tablet (1024px and below) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .About-Section {
+    background-size: cover;
+    background-position: center;
+
+  }
+
+  .AboutContainer {
+    max-width: 900px;
+    gap: 30px;
+  }
+
+  .aboutContent h2 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .aboutContent p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .dogContainer img {
+    height: 350px;
+    top: 50px;
+  }
+}
+
+/* ========================= */
+/* 📱 Mobile (768px and below) */
+/* ========================= */
+@media (max-width: 768px) {
+
+
+  .AboutContainer {
+    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    /* stack layout */
+    text-align: center;
+
+  }
+
+  .About-Section {
+    background-size: cover;
+    background-position: center;
+
+
+  }
+
+  .aboutContent h2 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .aboutContent p {
+    font-size: 12px;
+    line-height: 22px;
+    margin-top: 10px;
+  }
+
+  .dogContainer {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .dogContainer img {
+    height: auto;
+    /* 🔥 important fix */
+    max-width: 300px;
+    /* control size */
+    top: 0;
+    /* remove offset */
+  }
+}
+
+/* ========================= */
+/* 📱 Small Mobile (480px and below) */
+/* ========================= */
+@media (max-width: 480px) {
+  .AboutContainer {
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+    /* stack layout */
+    text-align: center;
+    padding: 20px;
+
+
+  }
+
+  .aboutContent h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .aboutContent p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .dogContainer img {
+    max-width: 220px;
+  }
+}
+
+/* ///// NEWS section CSS Code ////////////////////////////// */
+
+.News-Container {
+
+  width: 100%;
+  max-width: 1205px;
+  margin: 50px auto;
+  padding-top: 50px;
+}
+
+.NewsHeading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.NewsHeading h2 {
+  font-family: "Gordita";
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 76px;
+  color: #1f213f;
+  text-align: center;
+}
+
+.NewsHeading p {
+  font-family: "Gordita";
+  font-size: 20px;
+  color: #1f213f;
+  text-align: center;
+}
+
+.NewsCardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  place-items: center;
+
+}
+
+.newCard {
+  padding: 10px;
+  width: 307px;
+  margin: 50px 0px;
+  font-family: "Gordita";
+  font-weight: 400;
+  border-radius: 10px;
+
+}
+
+.newCard:hover {
+  box-shadow: 0px 0px 5px rgb(230, 229, 229);
+}
+
+.newCard h3 {
+  font-size: 23px;
+}
+
+.newCard p {
+  font-size: 16px;
+}
+
+.readmorebtn {
+  font-size: 16px;
+  line-height: 35px;
+  color: #ff26b0;
+  font-weight: 500;
+  font-family: "Gordita";
+  border: none;
+  background: none;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* 📱 Tablet (1024px and below) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .News-Container {
+    max-width: 900px;
+    padding: 40px 20px;
+  }
+
+  .NewsCardContainer {
+    grid-template-columns: repeat(3, 1fr);
+    /* 2 cards */
+  }
+
+  .NewsHeading h2 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  .NewsHeading p {
+    font-size: 18px;
+  }
+
+  .newCard {
+    padding: 10px;
+    width: 250px;
+    margin: 50px 0px;
+    font-family: "Gordita";
+    font-weight: 400;
+    border-radius: 10px;
+
+  }
+
+  .newCard h3 {
+    font-size: 18px;
+    margin: 5px 0px;
+  }
+
+  .newCard p {
+    font-size: 12px;
+    margin: 5px 0px;
+  }
+
+  .newCard img {
+    width: 90%;
+  }
+
+  .readmorebtn {
+    font-size: 12px;
+    line-height: 35px;
+    color: #ff26b0;
+    font-weight: 500;
+    font-family: "Gordita";
+    border: none;
+    background: none;
+    margin: 10px 0px;
+    cursor: pointer;
+  }
+
+}
+
+/* ========================= */
+/* 📱 Mobile (768px and below) */
+/* ========================= */
+@media (max-width: 768px) {
+  .News-Container {
+    padding: 30px 16px;
+  }
+
+  .NewsCardContainer {
+    grid-template-columns: repeat(2, 1fr);
+    /* 1 column */
+    gap: 20px;
+  }
+
+  .NewsHeading h2 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  .NewsHeading p {
+    font-size: 16px;
+  }
+
+  .newCard {
+    padding: 10px;
+    width: 80%;
+    margin: 50px 0px;
+    font-family: "Gordita";
+    font-weight: 400;
+    border-radius: 10px;
+
+  }
+
+  .newCard h3 {
+    font-size: 20px;
+  }
+
+  .newCard p {
+    font-size: 15px;
+  }
+}
+
+/* ========================= */
+/* 📱 Small Mobile (480px and below) */
+/* ========================= */
+@media (max-width: 480px) {
+  .NewsHeading h2 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .NewsHeading p {
+    font-size: 14px;
+  }
+
+  .readmorebtn {
+    font-size: 14px;
+  }
+
+  .News-Container {
+    padding: 30px 7px;
+  }
+
+  .NewsCardContainer {
+    grid-template-columns: repeat(1, 1fr);
+    /* 1 column */
+    gap: 10px;
+  }
+
+}
+
+
+/* ///////////////offer section ///////////////////////////// */
+.offerSection {
+  background-image: url("./img/herowrapper.png");
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  margin: 30px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.offerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.offerSection h2 {
+  font-size: 50px;
+  color: #1f213f;
+  font-family: "Gordita";
+  font-weight: 400;
+  text-align: center;
+}
+
+.offerSection p {
+  font-size: 20px;
+  line-height: 35px;
+  color: #1f213f;
+  font-family: "Gordita";
+  text-align: center;
+}
+
+.bgOffer {
+  background: #FF26B0;
+  color: white;
+  margin: 0px 10px;
+}
+
+.orderbtn {
+  font-size: 16px;
+  line-height: 35px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Gordita";
+  text-align: center;
+  background: #FF26B0;
+  border: none;
+  border-radius: 30px;
+  padding: 7px 30px;
+  align-items: center;
+  margin: 15px auto;
+}
+
+/* ========================= */
+/* 📱 Tablet (1024px and below) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .offerSection h2 {
+    font-size: 40px;
+    color: #1f213f;
+    font-family: "Gordita";
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .offerSection p {
+    font-size: 16px;
+    line-height: 35px;
+    color: #1f213f;
+    font-family: "Gordita";
+    text-align: center;
+  }
+
+  .orderbtn {
+    font-size: 13px;
+    line-height: 35px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Gordita";
+    text-align: center;
+    background: #FF26B0;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 20px;
+    align-items: center;
+    margin: 15px auto;
+  }
+}
+
+/* ========================= */
+/* 📱 Mobile (768px and below) */
+/* ========================= */
+@media (max-width: 768px) {
+  .offerSection h2 {
+    font-size: 28px;
+    color: #1f213f;
+    font-family: "Gordita";
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .offerSection p {
+    font-size: 13px;
+    line-height: 35px;
+    color: #1f213f;
+    font-family: "Gordita";
+    text-align: center;
+  }
+
+  .orderbtn {
+    font-size: 13px;
+    line-height: 35px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Gordita";
+    text-align: center;
+    background: #FF26B0;
+    border: none;
+    border-radius: 30px;
+    padding: 3px 18px;
+    align-items: center;
+    margin: 15px auto;
+  }
+}
+
+/* ========================= */
+/* 📱 Small Mobile (480px and below) */
+/* ========================= */
+@media (max-width: 480px) {}
+
+/* ///product section code ///////////////////////////////////////// */
+
+.productSection {
+  margin: 50px 0px;
+
+
+}
+
+.Product2Img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-left: auto;
+}
+
+.product-slider {
+  margin: 50px 0px;
+  text-align: center;
+  position: relative;
+  font-family: "Gordita", sans-serif;
+}
+
+.section-title {
+  font-size: 42px;
+}
+
+.section-title span {
+  font-weight: bold;
+}
+
+.section-sub {
+  max-width: 600px;
+  margin: 10px auto 40px;
+  color: #666;
+}
+
+/* Slider layout */
+.slider {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+
+}
+
+.slide {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.slide.active {
+  display: flex;
+}
+
+/* Left image */
+.left {
+  position: relative;
+  flex: 1;
+}
+
+.left img {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+.circle {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  /* background: #dfe3f0; */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Right content */
+.right {
+  flex: 1;
+  text-align: left;
+}
+
+.right h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.right p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.ProductBtn {
+  background: #ff26b0;
+  color: white;
+  border: none;
+  padding: 7px 35px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ProductBtn:hover {
+  background: #e6009e;
+  transform: translateY(-2px);
+}
+
+/* Dots */
+.dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background: #999;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ff26b0;
+}
+
+/* ========================= */
+/* 📱 Tablet (1024px and below) */
+/* ========================= */
+@media (max-width: 1024px) {
+
+  .slider {
+    max-width: 740px;
+  }
+
+  .slide {
+    gap: 25px;
+  }
+
+  .left img {
+    max-width: 300px;
+  }
+
+  .circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .right h3 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-sub {
+    font-size: 15px;
+  }
+
+  .Product2Img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-left: auto;
+    width: 170px;
+  }
+
+
+  .right p {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .NewsHeading p {
+    font-size: 16px
+  }
+}
+
+
+/* ========================= */
+/* 📱 Mobile (768px and below) */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .slide {
+    flex-direction: column;
+    /* 🔥 important */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left img {
+    max-width: 250px;
+    margin: auto;
+  }
+
+  .circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .right h3 {
+    font-size: 22px;
+  }
+
+  .right p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-sub {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  /* FIX ABSOLUTE IMAGE ISSUE */
+  .Product2Img {
+    position: static;
+    margin: 20px auto;
+    display: none;
+  }
+}
+
+
+/* ========================= */
+/* 📱 Small Mobile (480px and below) */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .left img {
+    max-width: 200px;
+  }
+
+  .circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .right h3 {
+    font-size: 18px;
+  }
+
+  .right p {
+    font-size: 14px;
+  }
+
+  .ProductBtn {
+    padding: 6px 20px;
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+/* ////////////footer section ////////////// */
+.footer {
+  position: relative;
+  padding: 60px 20px 20px;
+  font-family: "Gordita";
+
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+
+
+}
+
+/* MAIN GRID */
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+
+}
+
+/* LEFT */
+.footer-left h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* INPUT */
+.subscribe {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #999;
+  max-width: 300px;
+}
+
+.subscribe input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+  background: transparent;
+}
+
+.send-icon {
+  color: #ff26b0;
+  cursor: pointer;
+}
+
+/* SOCIAL */
+.social {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+/* LINKS */
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+
+/* LEFT DECOR */
+.footer-leaf {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  max-width: 20vw;
+  opacity: 0.4;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: #444;
+  margin-top: 10px;
+}
+
+.payments img {
+  height: 30px;
+}
+
+.footerIMGeffect {
+  width: 17%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-left: auto;
+
+}
+
+.footerLinkContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* * ========================= */
+/* 📱 Tablet (1024px and below) */
+/* ========================= */
+@media (max-width: 1024px) {
+  .footer-wrapper {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+
+  }
+
+  .footerLinkContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+}
+
+
+/* ========================= */
+/* 📱 Mobile (768px and below) */
+/* ========================= */
+@media (max-width: 768px) {
+
+  .footer-container,
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+
+  }
+
+  .footer-cookie {
+    display: none;
+  }
+
+  .footerIMGeffect {
+    width: 20%;
+    position: absolute;
+    right: 0;
+    top: -10%;
+    margin-left: auto;
+
+  }
+}
+
+/* ========================= */
+/* 📱 Small Mobile (480px and below) */
+/* ========================= */
+@media (max-width: 480px) {
+  .Hero-Wrapper {
+    padding: 0 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
