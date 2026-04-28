@@ -271,7 +271,12 @@ nav a {
   animation: glowPulse 3s infinite alternate;
 
 }
-
+.cartValue{
+color: white;
+position: relative;
+bottom: 16px;
+right: 10px;
+}
 @keyframes glowPulse {
   from {
     filter: drop-shadow(0px 0px rgb(171, 214, 212));
